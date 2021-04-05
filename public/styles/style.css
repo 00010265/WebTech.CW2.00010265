@@ -1,0 +1,51 @@
+*{
+    margin: 0;   
+}
+form{
+    width: 60%;
+    background-color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 30px;
+    box-shadow: #3C4542 5px 5px 5px ;
+  }
+  
+  input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #3C4542 solid 1px;
+    margin: 5px;
+    height: 30px;
+  }
+  input:focus {
+   outline: none; /* gets rid of any outline that usually appears when you click on the form */
+   border-bottom: #78c2e0 solid 2px
+;
+  }
+  .account-details{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+  }
+  .account-details div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+ 
+  
+  form button{
+    width: 20%;
+  padding: 10px 0;
+  margin: 10px auto;
+  border-radius: 5px; 
+  border: none;
+  background: #78c2e0 ;         
+  }
+  form button:hover{
+    background-color: #F97709;
+    color: white;
+  }
+

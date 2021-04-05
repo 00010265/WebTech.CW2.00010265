@@ -1,11 +1,13 @@
 const express = require('express')
-const app = express
+const app = express()
 const PORT = 8000
 
 app.set('view engine', 'pug')
 
+app.use('/static', express.static('public'))
+
 app.get('/', (req,res) => {
-    res.render('home')
+    res.render('index')
 })
 
 app.listen(PORT, (err) => {
