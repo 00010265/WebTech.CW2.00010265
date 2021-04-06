@@ -1,0 +1,12 @@
+extend layout.pug 
+
+block number1
+     .create-blog.content
+         form
+         label(for='title') Blog title:
+         input#title(type='text' name='title' required='')
+         label(for='snippet') Blog snippet:
+         input#snippet(type='text' name='snippet' required='')
+         label(for='body') Blog body:
+         textarea#body(name='body' required='')
+         button Submit
