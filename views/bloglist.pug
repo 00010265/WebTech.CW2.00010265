@@ -1,0 +1,7 @@
+extend layout
+
+block number1
+		each blog in blogs
+			li
+				a(href="/bloglist/" + blog.id)= blog.title
+				a(href="/bloglist/" + blog.id + "/delete").delete Delete

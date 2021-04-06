@@ -2,11 +2,13 @@ extend layout.pug
 
 block number1
      .create-blog.content
-         form
-         label(for='title') Blog title:
-         input#title(type='text' name='title' required='')
-         label(for='snippet') Blog snippet:
-         input#snippet(type='text' name='snippet' required='')
-         label(for='body') Blog body:
-         textarea#body(name='body' required='')
-         button Submit
+         if error===1
+             p.error Please fill all requirements 
+         form(action="/create" method="POST")
+              label(for='title') Blog title:
+              input#title(type='text' name='title' required='')
+              label(for='snippet') Blog snippet:
+              input#snippet(type='text' name='snippet' )
+              label(for='body') Blog body:
+              textarea#body(name='mainbody' required='')
+              button Submit the blog
