@@ -1,7 +1,8 @@
 extend layout.pug 
 
 block number1
-		.create-blog.content
+		.create-blog
+				h2 Fill the form to create a blog
 				form(action="/create" method="POST")
 					if success
 						p.success Note was added successfully

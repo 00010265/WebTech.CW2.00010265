@@ -1,14 +1,16 @@
 extend layout
 
 block number1
+	h1 Here are all the blogs created:
 	each blog in blogs
 			.details
 				.info
 					a(href="/bloglist/" + blog.id)= blog.title
 					.content
 						p #{blog.snippet}
-				a(href="/bloglist/" + blog.id + "/edit").delete edit
+				a(href="/bloglist/" + blog.id + "/edit").delete
+					img(src="/static/photos/edit.webp" alt='edit icon')
 				a(href="/bloglist/" + blog.id + "/delete").delete 
-					img(src='/trashcan.svg' alt='delete icon')
+					img(src="/static/photos/trash.svg" alt='delete icon')
 				
 				

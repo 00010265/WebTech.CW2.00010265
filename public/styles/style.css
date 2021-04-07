@@ -59,14 +59,17 @@
 
 
 
-
+    .create-blog h2{
+      margin-left: 12%;
+    }
     .create-blog form{
-      max-width: 700px;
+      max-width: 900px;
       margin: 0 auto;
     }
+    
     .create-blog input{
       width: 70%;
-      height: 10px;
+      height: 20px;
       margin: 10px 0;
       padding: 8px;
     }
@@ -79,9 +82,10 @@
     .create-blog label{
       display: block;
       margin-top: 24px;
+      font-weight: bold;
     }
     textarea{
-      height: 120px;
+      height: 200px;
     }
     .create-blog button{
       margin-top: 20px;
@@ -92,25 +96,73 @@
       border: 0;
       font-size: 1.2em;
       cursor: pointer;
+      border-radius: 10px;
     }
 
     .details{
+      height: 100px;
       margin-top: 60px;
+      padding: 10px;
+      border-bottom: solid 1px crimson ;
     }
-    .info{
-      
+
+    .details img{
+      height: 35px;
+    }
+
+    .info{      
       float:left;  
       width: 88%;
+    }
+    .info a{
+      font-size: x-large;
+      font-weight: bold;
     }
 
     
     .delete{
-      top: 0;
-      right: 0;
-      border-radius: 50%;
-      padding: 8px;
+      margin: 3px;
+      height: 45px;
     }
-    .delete:hover{
-      cursor: pointer;
-      box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+
+    .content{
+      margin-top: 20px;
+      font-size: medium;
+    }
+
+    .main1{
+      height: 200px;
+      margin-top: 100px;
+      margin-left: 50px;
+      border-bottom: solid 1px crimson ;
+    }
+    .main1 h4{
+      margin-bottom: 70px;
+    }
+
+    .main1 a{
+      
+      background-color: crimson;
+      color: white;
+      padding: 10px;
+    }
+    .main2{
+      margin-top: 100px;
+      margin-left: 50px;
+    }
+    .indexlist{
+      padding-left: 100px;
+      margin-bottom: 50px;
+    }
+    .main2 > a{
+      background-color: crimson;
+      color: white;
+      padding: 10px;
+    }
+
+    .success{
+      color: green;
+    }
+    .error{
+      color: red;
     }

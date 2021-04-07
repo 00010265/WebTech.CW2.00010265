@@ -1,5 +1,19 @@
 extend layout.pug 
 
 block number1
-     .blogs.content
-         
+	.homepage
+		h1 Welcome to the Programer's blog
+		div.main1
+			h4 Have you ever wanted to share you knowledge or tell an iteresting story from your life of programmer? Well, you are lucky, because in this website, you can  create your blog. Be helpful, understandable and interesting.
+			a(href='/create') Proceed to writing your blog
+		div.main2
+			h2 Here are the latest blogs created 
+			.indexlist
+				each blog in blogs
+					.details
+						.info
+							a(href="/bloglist/" + blog.id)= blog.title
+							.content
+								p #{blog.snippet}
+			a(href='/create') See the whole list of blogs
+

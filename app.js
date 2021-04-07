@@ -13,7 +13,13 @@ app.use(express.urlencoded({extended: false}))
 app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Home',  });
+  fs.readFile('./data/blogs.json', (err,data) => {
+    if (err) throw err
+    let indexlist = []
+    indexlist = JSON.parse(data)
+    indexlistchanged = indexlist.slice(0,3)
+    res.render('index', {blogs: indexlistchanged})
+  })
  });
 
  app.get('/edit', (req, res) => {

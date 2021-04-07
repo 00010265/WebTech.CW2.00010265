@@ -17,6 +17,8 @@ fs.readFile('./data/blogs.json', (err, data) => {
 })
 
 
+
+
   router.get('/bloglist', (req, res) => {
     fs.readFile('./data/blogs.json', (err,data) => {
       if (err) throw err
