@@ -25,6 +25,7 @@ nodemon app
 
 ### Dependancies
 - "express": "^4.17.1"
+- "body-parser": "^1.19.0"
 - "generate-unique-id": "^2.0.1"
 - "nodemon": "^2.0.7"
 - "pug": "^3.0.2"
