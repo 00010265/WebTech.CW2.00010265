@@ -43,5 +43,5 @@ app.use(bloglistroutes)
 app.listen(PORT, (err) => {
     if (err) throw err
 
-    console.log('This app is running on port 8000')
+    console.log('This app is running on port 3000')
 })

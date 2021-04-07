@@ -33,8 +33,10 @@ fs.readFile('./data/blogs.json', (err, data) => {
     const id = req.params.id
     const blog = blogsDb.find(blog => blog.id === id)
 
-	res.render('details', {blog: blog})
-  })
+	   res.render('details', {blog: blog})
+    })
+
+
   router.get('/bloglist/:id/edit', (req, res) => {
     const id = req.params.id
     const blog = blogsDb.find(blog => blog.id === id)
@@ -42,36 +44,49 @@ fs.readFile('./data/blogs.json', (err, data) => {
 	res.render('edit', {blog: blog})
   })
 
-  router.post('/edit', (req, res) => {
-     const id = req.params.id
-     blog = blogsDb.find(blog => blog.id === id)
-     const blogs = blogsDb  
-     const index = blogsDb.findIndex(note => note.id === id)
+
+
+
+
+
+
+
+  router.post('/bloglist/:id/edit', (req, res) => {
+    const id = req.params.id
+    blog = blogsDb.find(blog => blog.id === id)
+    const index = blogsDb.findIndex(blog => blog.id === id)
+  
+    blogsDb.splice(index, 1)
+  
     if (validate.isValid(req.body)) {
         title = req.body.title
         snippet = req.body.snippet
         mainbody = req.body.mainbody
-        blogsDb.splice(index, 1)
         newid=generateUniqueId()
-        blogs.push({
+        blogsDb.push({
             id: newid,
             title: title,
             snippet: snippet,
             mainbody: mainbody,
           })
-        blog = blogsDb.find(blog => blog.id === newid)
+        blog1 = blogsDb.find(blog => blog.id === newid)
         fs.readFile('./data/blogs.json', (err, data) =>{
         if (err) throw err
-        })
-    
-        fs.writeFile('./data/blogs.json', JSON.stringify(blogs), err =>{
+        })       
+           
+        fs.writeFile('./data/blogs.json', JSON.stringify(blogsDb), err =>{
           if (err) throw err
-          res.render("edit", { error: false, success: true, blog: blog })
+          res.render("edit", { error: false, success: true, blog: blog1 })
          })
       }
       else {
       res.render("edit", { error: true, success: false, blog: blog })
     }})
+
+
+
+
+
 
 
 
