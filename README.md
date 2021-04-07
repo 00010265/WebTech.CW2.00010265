@@ -1,6 +1,10 @@
 # Programmer's blog
 
-#### This blog application allows users to write a blog about the topic of their interest (related to programming, of course)
+#### This blog application allows users to write a blog about the topic of their interest (related to programming, of course). Here is the functionality of the web application:
+- creating blog
+- viewing blogs
+- editing created blogs
+- viewing json file that stores all data through '/api/v1/blogs' link
 
 To run this application on your computer, you should:
 

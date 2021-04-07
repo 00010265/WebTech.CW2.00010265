@@ -22,10 +22,15 @@ app.get('/', (req, res) => {
   })
  });
 
- app.get('/edit', (req, res) => {
-  res.render('edit', { title: 'Edit',  });
- });
+app.get('/api/v1/blogs', (req,res) => {
+  fs.readFile('./data/blogs.json', (err,data) => {
+    if (err) throw err
 
+    const blogs = JSON.parse(data)
+
+    res.json(blogs)
+  })
+})
 
 app.use(createroutes)
 
