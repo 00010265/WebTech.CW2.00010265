@@ -6,10 +6,10 @@ To run this application on your computer, you should:
 
 1. Clone the repository
 ```bash
-
+git clone https://github.com/00010265/WebTech.CW2.00010265
 ```
 
-2. Install the dependancies
+2. Install the dependencies
 ```bash
 cd [project folder]
 npm install
@@ -26,3 +26,4 @@ nodemon app
 - "pug": "^3.0.2"
 
 ### Github repository
+[link to github repository](https://github.com/00010265/WebTech.CW2.00010265)
