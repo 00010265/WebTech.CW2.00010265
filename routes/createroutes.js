@@ -35,7 +35,7 @@ router.get('/create', (req, res) => {
     
         fs.writeFile('./data/blogs.json', JSON.stringify(blogs), err =>{
           if (err) throw err
-         res.render('create', {error: false, success: true})
+         res.render('success')
          })
       })
     } else {

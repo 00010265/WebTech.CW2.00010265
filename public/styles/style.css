@@ -162,7 +162,23 @@
 
     .success{
       color: green;
+      font-size: xx-large;
     }
     .error{
       color: red;
+    }
+    .successpage{
+      font-size: large;
+      font-weight: bold;
+      margin: 10px;
+      text-decoration: underline;
+    }
+
+    .detailspage{
+      background-color: white;
+      max-width: 1000px;
+      padding: 50px;
+    }
+    .detailspage a{
+      margin-bottom: 30px;
     }
