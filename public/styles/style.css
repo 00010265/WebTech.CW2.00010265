@@ -5,6 +5,7 @@
       padding: 0 20px;
       font-family: 'Noto Serif', serif;
       max-width: 1200px;
+      background-color: rgba(151, 151, 151, 0.144);
     }
     p, h1, h2, h3, a, ul{
       margin: 0;
@@ -18,7 +19,7 @@
       justify-content: space-between;
       margin-bottom: 60px;
       padding-bottom: 10px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #d00;
       text-transform: uppercase;
     }
     nav ul{
@@ -40,7 +41,9 @@
     footer{
       color: #777;
       text-align: center;
-      margin: 80px auto 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 50px;
     }
     h2{
       margin-bottom: 40px;
@@ -52,14 +55,21 @@
     .content{
       margin-left: 20px;
     }
-    /* index styles */
-    /* details styles */
-    /* create styles */
+   
+
+
+
+
     .create-blog form{
-      max-width: 400px;
+      max-width: 700px;
       margin: 0 auto;
     }
-    .create-blog input,
+    .create-blog input{
+      width: 70%;
+      height: 10px;
+      margin: 10px 0;
+      padding: 8px;
+    }
     .create-blog textarea{
       display: block;
       width: 100%;
@@ -75,10 +85,32 @@
     }
     .create-blog button{
       margin-top: 20px;
+      padding: 5px;
       background: crimson;
       color: white;
       padding: 6px;
       border: 0;
       font-size: 1.2em;
       cursor: pointer;
+    }
+
+    .details{
+      margin-top: 60px;
+    }
+    .info{
+      
+      float:left;  
+      width: 88%;
+    }
+
+    
+    .delete{
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      padding: 8px;
+    }
+    .delete:hover{
+      cursor: pointer;
+      box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
     }

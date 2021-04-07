@@ -1,7 +1,14 @@
 extend layout
 
 block number1
-		each blog in blogs
-			li
-				a(href="/bloglist/" + blog.id)= blog.title
-				a(href="/bloglist/" + blog.id + "/delete").delete Delete
+	each blog in blogs
+			.details
+				.info
+					a(href="/bloglist/" + blog.id)= blog.title
+					.content
+						p #{blog.snippet}
+				a(href="/bloglist/" + blog.id + "/edit").delete edit
+				a(href="/bloglist/" + blog.id + "/delete").delete 
+					img(src='/trashcan.svg' alt='delete icon')
+				
+				

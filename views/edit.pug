@@ -2,15 +2,15 @@ extend layout.pug
 
 block number1
 		.create-blog.content
-				form(action="/create" method="POST")
+				form(action="/edit" method="POST")
 					if success
-						p.success Note was added successfully
+						p.success Note was edited  successfully
 					if error
 						p.error Please add all the information before submitting
 					label(for='title') Blog title:
-					input#title(type='text' name='title')
+					input#title(type='text' name='title' value = blog.title)
 					label(for='snippet') Blog snippet:
-					input#snippet(type='text' name='snippet')
+					input#snippet(type='text' name='snippet' value = blog.snippet)
 					label(for='body') Blog body:
-					textarea#body(name='mainbody')
+					textarea#body(name='mainbody')= blog.mainbody
 					button Submit the blog
